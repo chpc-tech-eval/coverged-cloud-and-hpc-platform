@@ -1,9 +1,7 @@
 <h1>
-  Technocrats
-  <img src="path/to/your/image.png" alt="Logo" width="80" align="right"/>
-</h1>
-
-## Converged Cloud & HPC Platform  
+  Converged Cloud & HPC Platform
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/Technocrats%20Logo.jpg" alt="Logo" width="200" align="right"/>
+</h1>  
 
 In this project our team has been tasked to investigate **Converged Cloud and High-Performance Computing (HPC) Platforms**.  
 
@@ -13,7 +11,7 @@ We will investigate how modern cloud technologies—particularly **OpenStack**, 
 
 ## ☁️ Cloud Computing  
 <p align="center">
-  <img src="images/technocrats-logo.jpg" alt="cloud computing" width="500"/>
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/cloud-computing-icon-for-your-website-mobile-presentation-and-logo-design-free-vector-3978331410.jpg" alt="cloud computing" width="100"/>
 </p>
 
 Cloud computing has become a major development in the world; it has fundamentally changed how businesses and individuals store, manage, and access data.  
@@ -33,7 +31,7 @@ OpenStack serves as the foundation of the converged platform.
 For example, a mobile application that interacts with a remote server can distribute user requests across multiple instances. As the number of users grows, new instances can be launched automatically to share the workload—ensuring smooth performance and efficient scaling as demand increases.
 
 <p align="center">
-  <img src="images/technocrats-logo.jpg" alt="openstack" width="500"/>
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/openstack_saas_cloud_platform_implementation_guide_powerpoint_ppt_template_bundles_cl_mm_slide12-2229342777.jpg" alt="openstack" width="500"/>
 </p>
 
 ### Core Components and Architecture of OpenStack  
@@ -64,7 +62,7 @@ OpenStack consists of numerous integrated components that work together to provi
 
 #### OpenStack Components  
 <p align="center">
-  <img src="images/technocrats-logo.jpg" alt="openstack" width="500"/>
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/Screenshot%202025-10-09%20210859.png" alt="openstack" width="500"/>
 </p>
 
 ## Kolla Ansible  
@@ -166,4 +164,5 @@ Manages bare-metal nodes for HPC workloads requiring maximum performance.
 
 </detail>
 ---
+
 
