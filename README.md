@@ -15,6 +15,7 @@
 In this project our team has been tasked to investigate Converged Cloud and High-Performance Computing (HPC) Platforms.
 
 The goal is to explore how cloud computing technologies can be utilized in an HPC platform to deliver scalable, efficient, and flexible computational infrastructure for research, analytics, and enterprise applications.
+
 ---
 
 ### Technologies Investigated
@@ -143,6 +144,7 @@ The end goal is to:
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
 
 
 
