@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/your-org/your-repo/assets/banner.png" width="70%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/cloud-computing-technology-internet-storage-network-photo-1537312438.jpg" width="70%" />
 </p>
 
 <h1 align="center">🚀 CHPC Cluster Deployment & Bare Metal Provisioning Project</h1>
@@ -137,22 +137,10 @@ The end goal is to:
 
 ---
 
-## 📝 Deliverables
-
-| Deliverable | Status |
-|-------------|--------|
-| Full Bare-Metal Cluster | In Progress |
-| Virtual Machine Cluster | Upcoming |
-| Benchmark Results | Upcoming |
-| Performance Comparison | Upcoming |
-| Technical Report | Pending |
-| Final Poster | Week 6 |
-| GitHub Repo & Documentation | Continuous |
-
----
 ## 🏁 Final Deadline
 
 - **Project Completion:** Sunday, 16 November 2025  
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
