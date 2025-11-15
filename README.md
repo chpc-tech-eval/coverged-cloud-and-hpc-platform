@@ -12,12 +12,9 @@
 
 ## 📌 Project Overview
 
-### Project Focus
-Our team has been tasked to investigate **Converged Cloud and High-Performance Computing (HPC) Platforms**.  
+In this project our team has been tasked to investigate Converged Cloud and High-Performance Computing (HPC) Platforms.
 
-**Goal:**  
-Explore how cloud computing technologies can be utilized in HPC to deliver **scalable, efficient, and flexible computational infrastructure** for research, analytics, and enterprise applications.
-
+The goal is to explore how cloud computing technologies can be utilized in an HPC platform to deliver scalable, efficient, and flexible computational infrastructure for research, analytics, and enterprise applications.
 ---
 
 ### Technologies Investigated
@@ -38,11 +35,14 @@ This project focuses on deploying a high-performance computing (HPC) cluster usi
 - **Switch-level networking & hardware configuration**
 
 The end goal is to:
-- Deploy a fully functional bare-metal OpenStack cluster  
-- Deploy the same cluster on virtual machines  
+- Investigate Cloud Computing platform **Openstack**
+- Configure Hardware at CSIR Lab
+- Configure the Networking
+- Deploy Ironic using Kolla Ansible
+- Deploy a fully functional bare-metal OpenStack cluster
+- Deploy the cluster on VMs using OpenStack    
 - Benchmark both setups  
-- Compare performance and efficiency  
-- Produce a full technical report + poster for CHPC evaluation  
+- Compare performance and efficiency   
 
 ---
 
@@ -60,10 +60,10 @@ The end goal is to:
 
 | Name | Role |
 |------|------|
-| **Nina** | Documentation Lead, Benchmark Analysis, Cluster Testing |
-| **Joey** | Bifrost Deployment, Benchmark Execution |
-| **Nic** | Ironic Deployment, VM Cluster Deployment |
-| **Jazeel** | Network Configuration, Cluster Configuration |
+| **Nina** | Documentation Lead, Benchmark Analysis, VM Deployment|
+| **Joey** | Ironic Deployment, Bare Metal Node Configuration |
+| **Nic** | Benchmark Testing, VM Cluster Deployment |
+| **Jazeel** | Bifrost Deployment, Cluster Configuration |
 
 ---
 
@@ -143,5 +143,6 @@ The end goal is to:
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
 
 
