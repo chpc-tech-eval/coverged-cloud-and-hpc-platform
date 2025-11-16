@@ -31,27 +31,25 @@ As part of this investigation, we will deploy a bare-metal HPC cluster using Ope
 
 ## 2. CSIR Lab (Hardware & Networking)
 **Hardware** 
--2× bare-metal compute nodes
--1× deployment / controller node
--Gigabit switch, management network, IPMI interfaces
+- 2× bare-metal compute nodes
+- 1× deployment / controller node
+- Gigabit switch, management network, IPMI interfaces
 
 **Network Configuration**
--2x Dell 1U servers in the rack
--Each server has 4 physical network interfaces
--Both servers connect to a single large managed company switch
--No separate lab-isolated switch available
--Provisioning network for Ironic will require its own dedicated interface
+- 2x Dell 1U servers in the rack
+- Each server has 4 physical network interfaces
+- Both servers connect to a single large managed company switch
+- No separate lab-isolated switch available
+- Provisioning network for Ironic will require its own dedicated interface
 
 ## 3. Deploy Ironic with Kolla Ansible
-A. Bare Metal Provisioning (Ironic + Bifrost)
-This phase involved preparing and provisioning physical compute nodes directly onto hardware using OpenStack Ironic and Bifrost. Unlike traditional virtualization, where virtual machines are created, Ironic allows users to deploy and manage physical servers directly, making it ideal for high-performance workloads that demand full hardware access.
+1. Bare Metal Provisioning (Ironic + Bifrost)
+This phase involved preparing and provisioning physical compute nodes directly onto hardware using OpenStack Ironic and Bifrost. Unlike traditional virtualization, where virtual machines are created, Ironic allows users to deploy and manage physical servers directly, making it ideal for high-performance workloads that demand full hardware access. After activating the Bifrost environment, the nodes were enrolled into the Ironic service and validated using baremetal node list. Once the nodes reached the “available” state, Ironic deployed the operating system through automated PXE booting. Successful provisioning was confirmed when each node entered the “active” state and allowed SSH access as cloud-user.
 
-After activating the Bifrost environment, the nodes were enrolled into the Ironic service and validated using baremetal node list. Once the nodes reached the “available” state, Ironic deployed the operating system through automated PXE booting. Successful provisioning was confirmed when each node entered the “active” state and allowed SSH access as cloud-user.
-
-B. Deploy the bare metal cluster using OpenStack
+3. Deploy the bare metal cluster using OpenStack
 After provisioning the hardware nodes, the next step was integrating them into an OpenStack-managed environment. Using Kolla Ansible, the controller and compute services required for cluster operation were deployed in containerized form.
 
-C. Deploy the cluster on VMs using OpenStack
+4. Deploy the cluster on VMs using OpenStack
 To create a comparable virtualized cluster, OpenStack was used to deploy multiple compute instances (VMs) using the same base operating system image as the bare-metal cluster.
 
 ## 4. Deploy the bare metal cluster using OpenStack
@@ -60,9 +58,9 @@ To create a comparable virtualized cluster, OpenStack was used to deploy multipl
 - Provisioning nodes with Bifrost was essential before using Kolla—nodes had to reach the active state.
 
 - Used key validation commands:
-   -BareMetal node list
-   -ansible-playbook enroll-dynamic.yaml
-   -ansible-playbook deploy-dynamic.yaml
+   - BareMetal node list
+   - ansible-playbook enroll-dynamic.yaml
+   - ansible-playbook deploy-dynamic.yaml
 
 - Only proceeded with Kolla-Ansible after successful Bifrost provisioning to avoid interface or firmware-related issues.
 
@@ -83,7 +81,7 @@ This project gave us real insight into how cloud tools support HPC. By deploying
 
 Through setup, troubleshooting, and benchmarking, we gained practical experience with OpenStack and Kolla Ansible, and a clearer understanding of how modern cloud platforms power high-performance systems.
 
-### EXpanded:
+### Expanded:
 During the deployment of our bare metal HPC cluster using OpenStack and Kolla-Ansible, we encountered several challenges:
 
 1. **Configuration Errors**
