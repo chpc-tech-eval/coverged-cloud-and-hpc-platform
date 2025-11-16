@@ -99,7 +99,37 @@ kolla-ansible upgrade -i /etc/kolla/inventory/overcloud
 openstack service list
 ```
 ---
-## **TASK** 4: Step-by-step procedure for enrolling and provisioning bare metal nodes using Bifrost
+## **TASK** 2: Step-by-step procedure for enrolling and provisioning bare metal nodes using Bifrost
+
+### Node Provisons
+```
+Interface Summary (with MACs)
+
+| Interface                  | MAC Address         | IP Address       | Status        | Likely Purpose                                         |
+| -------------------------- | ------------------- | ---------------- | ------------- | ------------------------------------------------------ |
+| **enp65s0f0**              | `00:10:18:f7:55:ce` | 172.16.10.1/24   | UP            | Internal/private network (optional management backend) |
+| **enp65s0f1**              | `00:10:18:f7:55:cf` | 10.128.24.200/24 | UP            | **Primary management + SSH + Kolla control network**   |
+| **eno3**                   | `b8:ca:3a:6c:54:b4` | —                | DOWN          | Unused                                                 |
+| **enp66s0f0**              | `3c:ec:ef:b2:63:b8` | —                | DOWN          | Unused                                                 |
+| **eno4**                   | `b8:ca:3a:6c:54:b5` | —                | DOWN          | Unused                                                 |
+| **eno1**                   | `b8:ca:3a:6c:54:b0` | —                | DOWN          | Unused                                                 |
+| **enp66s0f1**              | `3c:ec:ef:b2:63:b9` | —                | DOWN          | Unused                                                 |
+| **enp66s0f2**              | `3c:ec:ef:b2:63:ba` | —                | DOWN          | Unused                                                 |
+| **enp66s0f3**              | `3c:ec:ef:b2:63:bb` | 172.16.48.1/24   | UP (MTU 9000) | **External/provider network + HPC benchmark traffic**  |
+| **eno2**                   | `b8:ca:3a:6c:54:b2` | —                | DOWN          | Unused                                                 |
+| **enp66s0f3.64@enp66s0f3** | `3c:ec:ef:b2:63:bb` | 172.16.64.1/16   | UP            | **VLAN 64 PXE / Ironic provisioning network**          |
+
+Recommended Roles for Kolla/OpenStack
+
+| Role                                  | Interface                | MAC                 | Notes                                   |
+| ------------------------------------- | ------------------------ | ------------------- | --------------------------------------- |
+| **Management / API / SSH**            | `enp65s0f1`              | `00:10:18:f7:55:cf` | Used for SSH, control plane, API access |
+| **Internal Mgmt (optional)**          | `enp65s0f0`              | `00:10:18:f7:55:ce` | For backend or private service comms    |
+| **Neutron External / Provider**       | `enp66s0f3`              | `3c:ec:ef:b2:63:bb` | External/public networking for VMs      |
+| **PXE Provisioning (Ironic/Bifrost)** | `enp66s0f3.64@enp66s0f3` | `3c:ec:ef:b2:63:bb` | Baremetal network (PXE boot)            |
+| **Benchmark / HPC traffic**           | `enp66s0f3`              | `3c:ec:ef:b2:63:bb` | High-performance (jumbo frame) fabric   |
+
+```
 
 ### 1. Go to the inventories folder
 ```
