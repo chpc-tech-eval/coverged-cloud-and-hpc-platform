@@ -263,6 +263,15 @@ kubectl logs -n benchmarks job/cpu-stress
 kubectl logs -n benchmarks job/memory-benchmark
 kubectl top nodes
 ```
+<p align="center">
+<img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%206/compute01-bm.jpg" alt="Logo" width="50%" /> 
+<p align="center"><b>Figure 1:</b> Performance of compute01 of the Bare Metal Cluster with btop (tmux multiplexer) </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%206/compute01%20-%20vm.jpg" alt="Logo" width="50%" /> 
+<p align="center"><b>Figure 2:</b> Performance of compute02 of the Virtual Machine Cluster with btop (tmux multiplexer) </p>
+</p>
 
 #### Cleanup Benchmarks
 ```bash
