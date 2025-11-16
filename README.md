@@ -47,7 +47,7 @@ The end goal is to:
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 - Configure data-center hardware and networking  
 - Deploy OpenStack using Kolla Ansible  
@@ -57,7 +57,7 @@ The end goal is to:
 
 ---
 
-## 🧩 Technology Stack
+## Technology Stack
 
 | Area | Tools / Technologies |
 |------|----------------------|
@@ -71,7 +71,7 @@ The end goal is to:
 
 ---
 
-## 🗂 Project Breakdown (6-Week Plan)
+## Project Breakdown (6-Week Plan)
 
 ### **📅 Week 1 — Foundations**
 - Completed introductory tasks
@@ -108,7 +108,7 @@ The end goal is to:
 
 ---
 
-### **📅 Week 5 — Cluster Deployment & Benchmarking**
+### **📅 Week 5 — Cluster Deployment & Benchmarking (Complete ✔)**
 
 - Deploy OpenStack cluster on bare metal  
 - Configure nodes into a functioning HPC cluster  
@@ -118,7 +118,7 @@ The end goal is to:
 
 ---
 
-### **📅 Week 6 — Virtual Machine Cluster Deployment & Comparison**
+### **📅 Week 6 — Virtual Machine Cluster Deployment & Comparison (Complete ✔)**
 
 - Deploy the cluster on OpenStack VMs 
 - Configure cluster  
@@ -133,6 +133,7 @@ The end goal is to:
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
 
 
 
