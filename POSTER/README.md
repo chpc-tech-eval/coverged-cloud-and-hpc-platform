@@ -20,23 +20,70 @@
 7. Conclusion (Reflections)
 
 ## 1. Introduction
+Bare Metal Provisioning with Ironic vs Virtualised OpenStack Cluster Performance
+
+This project investigates how converged cloud technologies can be used to support High-Performance Computing (HPC). We explored OpenStack, Kolla Ansible, and Ironic to understand how cloud principles can be applied to HPC environments. Our objective was to deploy and provision a bare-metal cluster using Ironic and compare its performance against a virtualised OpenStack VM-based cluster. The study evaluates scalability, efficiency, and workload suitability across both models.
+
+Expanded:
+This project investigates Converged Cloud and High-Performance Computing (HPC) platforms and explores the integration of OpenStack, Kolla Ansible, and Ironic. to support both traditional HPC workloads—such as tightly coupled MPI-based applications—and elastic cloud-style workloads like VMs, containers, and burst environments.
+
+As part of this investigation, we will deploy a bare-metal HPC cluster using OpenStack, Kolla Ansible, and Ironic, provision physical nodes through automated orchestration, and run performance benchmarks. These results will then be compared against an equivalent VM-based cluster to evaluate differences in speed, efficiency, and resource overhead between bare metal and virtualized environments.
 
 ## 2. CSIR Lab (Hardware & Networking)
+**Hardware** 
+-2× bare-metal compute nodes
+-1× deployment / controller node
+-Gigabit switch, management network, IPMI interfaces
+
+**Network Configuration**
+-2x Dell 1U servers in the rack
+-Each server has 4 physical network interfaces
+-Both servers connect to a single large managed company switch
+-No separate lab-isolated switch available
+-Provisioning network for Ironic will require its own dedicated interface
 
 ## 3. Deploy Ironic with Kolla Ansible
+A. Bare Metal Provisioning (Ironic + Bifrost)
+This phase involved preparing and provisioning physical compute nodes directly onto hardware using OpenStack Ironic and Bifrost. Unlike traditional virtualization, where virtual machines are created, Ironic allows users to deploy and manage physical servers directly, making it ideal for high-performance workloads that demand full hardware access.
+
+After activating the Bifrost environment, the nodes were enrolled into the Ironic service and validated using baremetal node list. Once the nodes reached the “available” state, Ironic deployed the operating system through automated PXE booting. Successful provisioning was confirmed when each node entered the “active” state and allowed SSH access as cloud-user.
+
+B. Deploy the bare metal cluster using OpenStack
+After provisioning the hardware nodes, the next step was integrating them into an OpenStack-managed environment. Using Kolla Ansible, the controller and compute services required for cluster operation were deployed in containerized form.
+
+C. Deploy the cluster on VMs using OpenStack
+To create a comparable virtualized cluster, OpenStack was used to deploy multiple compute instances (VMs) using the same base operating system image as the bare-metal cluster.
 
 ## 4. Deploy the bare metal cluster using OpenStack
+- Checked all configuration changes with mentor documentation before modifying anything in /etc/kolla.
 
-## 5. Deploy the cluster on VMs using OpenStack
+- Provisioning nodes with Bifrost was essential before using Kolla—nodes had to reach the active state.
+
+- Used key validation commands:
+   -BareMetal node list
+   -ansible-playbook enroll-dynamic.yaml
+   -ansible-playbook deploy-dynamic.yaml
+
+- Only proceeded with Kolla-Ansible after successful Bifrost provisioning to avoid interface or firmware-related issues.
 
 ## 6. Execute benchmarks on clusters
+Benchmarking was performed to evaluate and compare the performance of both the bare-metal and VM-based clusters.
+
+Each test was run under identical software configurations and workload conditions. The results highlighted the performance differences between direct hardware execution and virtualized environments, showcasing the impact of the hypervisor, resource sharing, and I/O virtualization
 
 ## 7. Compare the performance to the cluster deployed on bare metal
+Chart:
+
 
 ## 8. Discuss the Results
 
-## 9. Challenges Faced
 
+## 9. Challenges Faced
+This project gave us real insight into how cloud tools support HPC. By deploying both bare-metal and VM clusters, we saw firsthand how Ironic delivers faster, HPC-focused performance, while VMs offer flexibility for general workloads. 
+
+Through setup, troubleshooting, and benchmarking, we gained practical experience with OpenStack and Kolla Ansible, and a clearer understanding of how modern cloud platforms power high-performance systems.
+
+### EXpanded:
 During the deployment of our bare metal HPC cluster using OpenStack and Kolla-Ansible, we encountered several challenges:
 
 1. **Configuration Errors**
