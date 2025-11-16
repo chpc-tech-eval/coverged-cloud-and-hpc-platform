@@ -35,7 +35,7 @@ As part of this investigation, we will deploy a bare-metal HPC cluster using Ope
 - Gigabit switch, management network, IPMI interfaces
 
 **Network Configuration**
-- 2x Dell 1U servers in the rack
+- 2x Dell 2U servers in the rack
 - Each server has 4 physical network interfaces
 - Both servers connect to a single large managed company switch
 - No separate lab-isolated switch available
