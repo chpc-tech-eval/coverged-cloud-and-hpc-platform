@@ -31,8 +31,7 @@ Compute nodes: `compute01` (172.16.48.14), `compute03` (172.16.48.16) → `slurm
 # Identical ‘slurm.conf` deployed on all nodes  
 # sinfo` confirms 2 nodes visible in partition `compute` 
 ```
-**SUCCESSFUL**
----
+SUCCESSFUL
 
 ## **TASK** 3: **BENCHMARKS** — **STRESS-NG** **(*EXECUTED ON compute01)**
 
