@@ -403,6 +403,14 @@ EOF
 
 ## Results And Evaluation
 
+| Metrics | Baremetal Cluster | VM Cluster |
+|---------|-------------------|------------|
+| **Total Operations (bogo-opc secs)** | 289,019 | 3,439,530 |
+| **Real Time** | 30.00 | 60.06 |
+| **User Time** | 239.54 | 46.28 |
+| **System Time** | 0.01 | 13.78 |
+| **Throughput (bogo ops/s)** | 9,633.64 | 1,206.53 |
+
 ### Methodology
 
 To quantify the performance impact of virtualization, we conducted a CPU stress test using `stress-ng` on two environments:
