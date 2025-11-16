@@ -32,7 +32,6 @@ As part of this investigation, we will deploy a bare-metal HPC cluster using Ope
 ## 2. CSIR Lab (Hardware & Networking)
 **Hardware** 
 - 2× bare-metal compute nodes
-- 1× deployment / controller node
 - Gigabit switch, management network, IPMI interfaces
 
 **Network Configuration**
@@ -70,11 +69,11 @@ Benchmarking was performed to evaluate and compare the performance of both the b
 Each test was run under identical software configurations and workload conditions. The results highlighted the performance differences between direct hardware execution and virtualized environments, showcasing the impact of the hypervisor, resource sharing, and I/O virtualization
 
 ## 7. Compare the performance to the cluster deployed on bare metal
-Chart:
-
+<img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%206/bmc%20vd%20vmc.png" />
+<img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%206/comparison.png" />
 
 ## 8. Discuss the Results
-
+The benchmark results demonstrate that the bare-metal node delivers significantly superior performance, with approximately 8 times the throughput of the VM cluster. The bare-metal environment exhibits high CPU efficiency with minimal overhead, making it the optimal choice for high-performance computing (HPC) and latency-sensitive workloads. The VM cluster, while offering flexibility, introduces substantial performance penalties due to virtualization overhead.
 
 ## 9. Challenges Faced
 This project gave us real insight into how cloud tools support HPC. By deploying both bare-metal and VM clusters, we saw firsthand how Ironic delivers faster, HPC-focused performance, while VMs offer flexibility for general workloads. 
