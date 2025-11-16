@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/cloud-computing-technology-internet-storage-network-photo-1537312438.jpg" width="70%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/cloud-computing-technology-internet-storage-network-photo-1537312438.jpg" width="70%" />
 </p>
 
 <h1 align="center">🚀 2025 CHPC Technocrats - Converged Cloud And HPC Platform Project</h1>
@@ -144,6 +144,7 @@ The end goal is to:
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
 
 
 
