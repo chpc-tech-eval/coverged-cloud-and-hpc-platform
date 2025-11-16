@@ -57,17 +57,6 @@ The end goal is to:
 
 ---
 
-## 👥 Team Members
-
-| Name | Role |
-|------|------|
-| **Nina** | Documentation Lead, Benchmark Analysis, VM Deployment|
-| **Joey** | Ironic Deployment, Bare Metal Node Configuration |
-| **Nic** | Benchmark Testing, VM Cluster Deployment |
-| **Jazeel** | Bifrost Deployment, Cluster Configuration |
-
----
-
 ## 🧩 Technology Stack
 
 | Area | Tools / Technologies |
@@ -144,6 +133,7 @@ The end goal is to:
 - **Poster Final Edits Allowed Until:** 23 November 2025 @ 23:59  
 
 <p align="center"><strong>⚡ High Performance. Real Infrastructure. Real Results. ⚡</strong></p>
+
 
 
 
