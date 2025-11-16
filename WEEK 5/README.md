@@ -13,7 +13,7 @@ We deployed two CentOS bare-metal compute nodes (compute01 and compute03) using 
 - 2x CentOS bare metal nodes (`compute01`, `compute03`) deployed via Bifrost/Ironic  
 - SSH access confirmed from `ansible` control node  
 
-### Setup Summary:
+### **TASK 2:** **Slurm** **Setup**
 
 **Control Node (ansible):**
 - Installed and configured slurmctld, the SLURM controller daemon responsible for managing job queues, partitions, and resource allocation.
