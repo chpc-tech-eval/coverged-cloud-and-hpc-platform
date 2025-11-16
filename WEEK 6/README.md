@@ -2,12 +2,10 @@
 
 ## Project Overview
 
-## Table of Contents
-
 1. [Prerequisites](#prerequisites)
 2. [Step-by-Step Setup](#step-by-step-setup)
 3. [Benchmarking Procedures](#benchmarking-procedures)
-4. [Results And Evaluation](#results-and-evaluation).
+4. [Results And Evaluation](#results-and-evaluation)
 
 This documentation covers the complete setup of a 2-node Kubernetes cluster on OpenStack VMs and the execution of CPU/RAM benchmarks to measure cluster performance.
 
@@ -399,30 +397,63 @@ spec:
   backoffLimit: 1
 EOF
 ```
+## Benchmark Results 
 
-## Performance Comparison Template
-
-When comparing with bare metal clusters, use this template:
-
-```bash
-# Performance metrics to compare:
-# - CPU: Operations per second from cpustress
-# - Memory: Bandwidth and throughput from stress-ng
-# - Network: Latency and bandwidth between nodes
-# - Storage: I/O operations per second
-# - Resource overhead: Kubernetes vs bare metal utilization
-
-# Expected VM overhead: 5-15% performance impact
-```
-
-## Security Notes
-
-- Always use `sudo` for kubeadm commands
-- Secure etcd with proper certificates in production
-- Use network policies to restrict pod communication
-- Regularly update Kubernetes and container runtimes
-- Enable audit logging for production clusters
+<img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%206/Picture2.png" alt="Logo" /> 
 
 ## Results And Evaluation
+
+### Methodology
+
+To quantify the performance impact of virtualization, we conducted a CPU stress test using `stress-ng` on two environments:
+
+* **Bare-Metal Cluster:** A physical server with direct hardware access.
+* **VM Cluster:** A virtualized environment running on shared host infrastructure.
+
+The test measured total operations, throughput (operations per second), and CPU time distribution.
+
+## Detailed Analysis
+
+### Total Operations & Throughput
+
+While the raw total of operations is higher for the VM, this is misleading as the test duration was not the same. The most critical metric is **throughput (ops/sec)**.
+
+**Table 1: Throughput Comparison**
+
+| Metric | Bare Metal | VM Cluster | Difference |
+|--------|-------------|------------|------------|
+| **Test Duration** | 30.00 sec | 60.06 sec | 2x longer for VM |
+| **Total Operations** | 289,019 | 3,439,530 | (Not directly comparable) |
+| **Throughput (ops/sec)** | **9,633.64** | **1,206.53** | **Bare Metal is ~8x Faster** |
+
+**Analysis:** The bare-metal node processed computations at a rate nearly eight times greater than the VM cluster. This is a direct result of the VM's virtualization overhead, including vCPU scheduling and resource contention on the physical host.
+
+### CPU Efficiency & Overhead
+
+The distribution of CPU time between user space (productive work) and system space (kernel overhead) is a key indicator of efficiency.
+
+**Table 2: CPU Time Distribution**
+
+| CPU Time | Bare Metal | VM Cluster | Interpretation |
+|----------|-------------|------------|----------------|
+| **User Time** | 239.54s | 46.28s | Bare metal spends more total CPU time on productive work. |
+| **System Time** | 0.01s | 13.78s | VM spends a significant amount of time on kernel/overhead tasks. |
+| **System/User Ratio** | **0.004%** | **29.8%** | **VM system overhead is ~7,450x higher.** |
+
+**Analysis:** The bare-metal server dedicates almost 100% of its CPU time to useful computation. In contrast, the VM cluster spends a substantial portion (almost 30% of its user time) on system-level operations, indicating overhead from the hypervisor, virtual hardware emulation, and scheduling delays.
+
+**Table 3: Normalized Per-Core Performance**
+
+| Metric | Bare Metal | VM Cluster | Performance Gap |
+|--------|-------------|------------|-----------------|
+| **Throughput (ops/sec)** | 9,633.64 | 1,206.53 | - |
+| **Assumed Cores** | 8 | 8 | (Assumed equal for comparison) |
+| **Per-Core Throughput** | **1,204.2 ops/sec/core** | **150.8 ops/sec/core** | **Bare Metal is ~8x Faster per Core** |
+
+**Analysis:** When normalized per core, the performance disparity remains clear. Each physical core in the bare-metal environment is vastly more effective than a vCPU in the VM cluster.
+
+## Conclusion: 
+
+The benchmark results demonstrate that the **bare-metal node delivers significantly superior performance, with approximately 8 times the throughput** of the VM cluster. The bare-metal environment exhibits high CPU efficiency with minimal overhead, making it the optimal choice for high-performance computing (HPC) and latency-sensitive workloads. The VM cluster, while offering flexibility, introduces substantial performance penalties due to virtualization overhead.
 
 ---
