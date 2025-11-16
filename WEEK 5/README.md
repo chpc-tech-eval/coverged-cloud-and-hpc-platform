@@ -43,7 +43,7 @@ Command to Execute Benchmark:
 
 **cpu**  289019  30.00  239.54  0.01  9633.64  1206.53
 
-![Resilts](https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%205/Picture1.png)
+![Resilts](https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/main/WEEK%205/Picture1.png)
 
 ### Breakdown:
 
