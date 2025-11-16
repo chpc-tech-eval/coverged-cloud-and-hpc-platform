@@ -99,7 +99,7 @@ kolla-ansible upgrade -i /etc/kolla/inventory/overcloud
 openstack service list
 ```
 ---
-## **TASK** 4: Step-by-step procedure for enrolling and provisioning bare metal nodes using Bifrost
+## **TASK** 2: Step-by-step procedure for enrolling and provisioning bare metal nodes using Bifrost
 
 ### Node Provisons
 ```
