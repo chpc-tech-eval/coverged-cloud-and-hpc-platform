@@ -23,11 +23,11 @@ After reviewing Ironic requirements and deployment references, we confirmed that
 - Ethernet cables
 
 <p align="center">
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/control.jpg" width="18%" />
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/network%20ports.jpg" width="18%" />
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/psu.jpg" width="18%" />
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/servers.jpg" width="18%" />
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/switch.jpg" width="18%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/control.jpg" width="18%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/network%20ports.jpg" width="18%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/psu.jpg" width="18%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/servers.jpg" width="18%" />
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/switch.jpg" width="18%" />
 </p>
 
 <p align="center"><b>Figure 1:</b> CSIR Lab Server Hardware, Rack Positioning & Cabling Work</p>
@@ -70,7 +70,7 @@ Confirmed access to the server:
 - We accessed the servers remotely by SSHing through a jumpbox, and established a secure WireGuard tunnel to reach the internal network. This allowed us to remotely manage and interact with the lab servers as if we were directly connected on-site.
 
 <p align="center">
-  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/CSIR%20Lab/btop.jpg" width="50%"/>
+  <img src="https://github.com/chpc-tech-eval/coverged-cloud-and-hpc-platform/blob/Nina/WEEK%202%263%20-%20CSIR%20Lab/btop.jpg" width="50%"/>
 </p>
 
 <p align="center"><b>Figure 2:</b> Btop Running on the server</p>
